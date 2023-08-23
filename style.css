@@ -1,0 +1,297 @@
+:root {
+    --bg-cinza: rgb(68, 68, 68);
+    --white-base: aliceblue;
+    --bg-fosco: rgba(105, 105, 105, 0.300);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-cinza);
+    color: var(--white-base);
+    font-size: 1.3em;
+    font-family: 'Lora', serif;
+    font-family: 'Signika Negative', sans-serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    border-top: 1px solid dimgray;
+    bottom: -12vh;
+    left: 0;
+    height: 40px;
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.light {
+    background: var(--white-base);
+    color: var(--bg-cinza);
+}
+
+.toggle {
+    position: relative;
+    border: 1px solid white;
+    background-color: darkgray;
+    width: 8px;
+    border-radius: 25px;
+    height: 60px;
+    box-shadow: 0 5px 10px var(--white-base);
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: "";
+    top: 70%;
+    position: absolute;
+    transform: translateX(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: var(--white-base);
+    border: 5px solid dimgray;
+    border-radius: 50%;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 5px 10px var(--bg-cinza);
+}
+
+.toggle.active::before {
+    top: calc(-20%);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+textarea {
+    width: 90%;
+    resize: none;
+    font-size: 1.3em;
+    border-radius: 20px;
+    padding: 10px;
+    color: var(--bg-cinza);
+}
+
+.btn-cronometro {
+    background: gray;
+    color: var(--white-base);
+    margin: 5px;
+    padding: 8px 20px;
+    width: auto;
+    border-radius: 8px;
+    border: 2px solid var(--bg-cinza);
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+.relogios {
+    border: 5px outset gray;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    margin: 15px 25px;
+    padding: 10px 0;
+}
+
+.relogios button {
+    transition: 0.5s;
+}
+
+.relogios button:hover {
+    background: rgb(50, 50, 50);
+    border-color: black;
+}
+
+#relogio, #cronometro {
+    font-size: 3em;
+    margin: 10px;
+}
+
+.div-adicionar{
+    display: block;
+    width: 50%;
+    margin: 20px 20px;
+    font-size: 0.8em;
+}
+
+.input-text {
+    width: 100%;
+    margin: auto;
+    font-size: 2em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn-input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 30%;
+    font-size: 1.5em;
+    border: 2px solid dimgray;
+    border-radius: 8px;
+    color: var(--white-base);
+    background: rgba(28, 28, 255, 0.877);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-input:hover {
+    background: radial-gradient(darkblue, blue);
+    border: 2px solid black;
+    border-radius: 20px;
+    transform: scale(1.1, 1);
+}
+
+.lista-fazer, .lista-feito {
+    width: 50%;
+    background: var(--bg-fosco);
+    border: 5px solid var(--bg-fosco);
+    border-radius: 15px;
+    margin: 0 5px;
+}
+
+.fazer, .feito {
+    list-style: none;
+    height: 100%;
+    margin: 15px 35px;
+    padding: 15px;
+    text-align: center;
+}
+
+.fazer li, .feito li {
+    display: flex;
+    justify-content: space-between;
+    background: dimgray;
+    color: var(--white-base);
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.fazer p, .feito p {
+    margin: auto;
+}
+
+li:hover {
+    background: rgb(30, 30, 30);
+    border-color: black;
+}
+
+.notas {
+    display: flex;
+    height: 100%;
+}
+
+.tarefas {
+    display: flex;
+    width: 50%;
+}
+
+.anotacoes {
+    text-align: center;
+    width: 50%;
+    margin: 0 10px;
+    background: var(--bg-fosco);
+    border: 5px solid var(--bg-fosco);
+    border-radius: 15px;
+}
+
+.pausado {
+    color: red;
+    text-decoration: underline;
+}
+
+.check {
+    margin: 6px 5px;
+}
+
+.excluir {
+    padding: 0 5px;
+    background: var(--bg-cinza);
+    color: var(--white-base);
+    font-size: 0.8em;
+    border-radius: 10px;
+}
+
+.excluir::after {
+    color: crimson;
+    content: 'X';
+}
+
+@media (max-width: 1000px) {
+    .tarefas {
+        width: 65%;
+    }
+}
+
+@media (max-width: 850px) {
+    .btn-input {
+        width: 40%;
+    }
+    
+    .tarefas {
+        width: 100%;
+        margin: 10px 5px;
+    }
+
+    .anotacoes {
+        display: block;
+        width: 100%;
+    }
+
+    .notas {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        font-size: 0.9em;
+        margin: 5px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .relogios {
+        width: auto;
+    }
+
+    .input-text {
+        font-size: 1.8em;
+    }
+
+    .btn-input {
+        width: 50%;
+    }
+
+    .relogios {
+        display: block;
+        border-radius: 5px;
+    }
+
+    .toggle {
+        margin: 30px auto;
+    }
+
+    .fazer, .feito {
+        margin: 0 3px;
+        width: 90%;
+    }
+}
