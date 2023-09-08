@@ -48,13 +48,12 @@ footer {
     cursor: pointer;
 }
 
-.toggle::before {
-    content: "";
+.toggle img {
     top: 70%;
     position: absolute;
     transform: translateX(-50%);
-    height: 15px;
-    width: 15px;
+    height: 35px;
+    width: 35px;
     background-color: var(--white-base);
     border: 5px solid dimgray;
     border-radius: 50%;
@@ -62,7 +61,7 @@ footer {
     box-shadow: 0 5px 10px var(--bg-cinza);
 }
 
-.toggle.active::before {
+.toggle.active img {
     top: calc(-20%);
 }
 
