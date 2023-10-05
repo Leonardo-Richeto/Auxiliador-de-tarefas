@@ -4,7 +4,7 @@ import { iniciaCronometro, zeraCronometro, timer, controleTimer } from "./module
 import { adicionaAfazer } from "./modules/adicionaAfazer.js";
 import { arrayFazer, arrayFeito } from "./modules/atualizaStorage.js";
 import { removeArrayFazer, removeArrayFeito } from "./modules/removeArray.js";
-import { recuperaStorage } from "./modules/recuperaStorage.js";
+//import { recuperaStorage } from "./modules/recuperaStorage.js";
 
 const consoleCalendario = document.querySelector('#calendario')
 const consoleRelogio = document.querySelector('#relogio')
@@ -99,4 +99,7 @@ export {
     texto
 }
 
-recuperaStorage()
+// recuperaStorage()
+// O recurso para recuperar o localStorage com o erro abaixo, ainda não identifiquei o motivo
+// Failed to load resource: the server responded with a status of 404 (Not Found)
+// Se chamar a funçao importada, ocorre o erro.
