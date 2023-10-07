@@ -1,10 +1,10 @@
-import { htmlRelogio } from "./modules/relogio.js";
-import { htmlCalendario } from "./modules/data.js";
-import { iniciaCronometro, zeraCronometro, timer, controleTimer } from "./modules/cronometro.js";
+import { relogio } from "./modules/relogio.js";
+import { dia } from "./modules/data.js";
+import { iniciaCronometro, pausaCronometro, zeraCronometro, timer } from "./modules/cronometro.js";
 import { adicionaAfazer } from "./modules/adicionaAfazer.js";
 import { arrayFazer, arrayFeito } from "./modules/atualizaStorage.js";
 import { removeArrayFazer, removeArrayFeito } from "./modules/removeArray.js";
-//import { recuperaStorage } from "./modules/recuperaStorage.js";
+import { recuperaStorage } from "./modules/recuperaStorage.js"
 
 const consoleCalendario = document.querySelector('#calendario')
 const consoleRelogio = document.querySelector('#relogio')
@@ -17,7 +17,6 @@ const btnToggle = document.querySelector('.toggle')
 const listaFazer = document.querySelector('.fazer')
 const listaFeito = document.querySelector('.feito')
 let texto = document.querySelector('#input')
-let controleBotao
 
 btnToggle.addEventListener('click', () => {
     document.body.classList.toggle('light')
@@ -26,39 +25,26 @@ btnToggle.addEventListener('click', () => {
 
 iniciar.addEventListener('click', () => {
     consoleCronometro.classList.remove('pausado')
-    clearInterval(controleTimer, controleBotao)
+    clearInterval(timer)
     iniciaCronometro()
-    controleBotao = setInterval(()=> {
-        consoleCronometro.innerHTML = timer
-    },1000)
 })
 
 pausar.addEventListener('click', () => {
-    if(consoleCronometro.innerHTML === '00:00:00'){
-        clearInterval(controleBotao)
-    }else{
-        consoleCronometro.classList.add('pausado')
-        clearInterval(controleTimer, controleBotao)
-    }
+    pausaCronometro()
 })
 
 zerar.addEventListener('click', () => {
-    consoleCronometro.classList.remove('pausado')
-    clearInterval(controleBotao)
     zeraCronometro()
-    consoleCronometro.innerHTML = '00:00:00'
 })
 
 adicionar.addEventListener('click', () => {
     if (texto.value){
-        arrayFazer.push(texto.value)
         adicionaAfazer()
     }
 })
 
 texto.addEventListener('keydown', (event) => {
     if(event.key === 'Enter' && texto.value) {
-        arrayFazer.push(texto.value)
         adicionaAfazer()
     }
 })
@@ -89,17 +75,17 @@ listaFeito.addEventListener('click', (e) => {
     }
 })
 
-setInterval(()=> {
-    consoleRelogio.innerHTML = htmlRelogio
-    consoleCalendario.innerHTML = htmlCalendario
-}, )
+recuperaStorage()
+relogio()
+dia()
+setInterval(relogio, 1000)
+setInterval(dia, 60000)
 
 export { 
     listaFazer,
-    texto
+    listaFeito,
+    consoleRelogio,
+    consoleCalendario,
+    consoleCronometro,
+    texto,
 }
-
-// recuperaStorage()
-// O recurso para recuperar o localStorage com o erro abaixo, ainda não identifiquei o motivo
-// Failed to load resource: the server responded with a status of 404 (Not Found)
-// Se chamar a funçao importada, ocorre o erro.

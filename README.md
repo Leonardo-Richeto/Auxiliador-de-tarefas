@@ -1,9 +1,9 @@
-# Ferramentas para estudo
+# Auxiliador de tarefas
 - Criei esta pagina usando **HTML, CSS e JavaScript** para aprender a solucionar problemas durante o desenvolvimento.
 - Esta página me possibilitou colocar em prática e aprender diversas coisas, como: FlexBox, manipular o DOM, lógica de programação, parâmetros, datas, e muito mais.
 
 **<h2 align="center">Página online</h2>**
-- Para visitar a página, acesse: [Ferramentas para estudo](https://leonardo-richeto.github.io/Ferramentas-para-estudo/), ou baixe os arquivos e abra o `index.html` no seu navegador.
+- Para visitar a página, acesse: [Auxiliador de tarefas](https://leonardo-richeto.github.io/Ferramentas-para-estudo/), ou baixe os arquivos e abra o `index.html` no seu navegador.
 - O projeto conta com armazenamento no localStorage, responsividade, light e dark mode.
 
 **<h2 align="center">Pré-visualização</h2>**

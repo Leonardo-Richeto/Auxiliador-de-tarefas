@@ -12,5 +12,5 @@ const p = document.createElement('p')
     li.appendChild(p)
     li.appendChild(btnDel)
     
-    return { li, p }
+    return { li, p, check }
 }

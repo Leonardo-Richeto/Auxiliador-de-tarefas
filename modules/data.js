@@ -1,10 +1,9 @@
 import { zero } from "./zeroEsquerda.js";
+import { consoleCalendario } from "../main.js";
 
 const dataHoje = new Date()
 const diaSemana = dataHoje.getDay()
-let htmlCalendario = ''
 let diaSemanaTxt
-
 const meses = [
     'Janeiro',
     'Fevereiro',
@@ -47,10 +46,6 @@ switch (diaSemana){
         diaSemanaTxt = 'Data Inválida'
 }
 
-export function data() {
-    htmlCalendario = `${diaSemanaTxt}, ${zero(dataHoje.getDate())} de ${mesTexto} de ${dataHoje.getFullYear()}`
+export function dia() {
+    consoleCalendario.innerHTML = `${diaSemanaTxt}, ${zero(dataHoje.getDate())} de ${mesTexto} de ${dataHoje.getFullYear()}`
 }
-
-export { htmlCalendario }
-
-data()

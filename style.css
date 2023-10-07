@@ -58,7 +58,7 @@ footer {
     border: 5px solid dimgray;
     border-radius: 50%;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0 5px 10px var(--bg-cinza);
+    box-shadow: 5px 5px 10px var(--bg-cinza);
 }
 
 .toggle.active img {
@@ -128,6 +128,7 @@ textarea {
     font-size: 2em;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 5px 5px 10px var(--bg-cinza);
 }
 
 .btn-input {

@@ -1,5 +1,5 @@
+import { consoleCronometro } from "../main.js";
 let timer
-let controleTimer
 let segundos = 0
 
 function criaSegundos(segundos){
@@ -11,15 +11,26 @@ function criaSegundos(segundos){
 }
 
 export function iniciaCronometro(){
-    controleTimer = setInterval(() => {
-        timer = criaSegundos(segundos)
+    timer = setInterval(()=> {
+        consoleCronometro.innerHTML = criaSegundos(segundos)
         segundos++
-    }, 1000);
+    },1000)
+}
+
+export function pausaCronometro(){
+    if(consoleCronometro.innerHTML === '00:00:00'){
+        clearInterval(timer)
+    }else{
+        consoleCronometro.classList.add('pausado')
+        clearInterval(timer)
+    }
 }
 
 export function zeraCronometro(){
-    clearInterval(controleTimer)
+    consoleCronometro.classList.remove('pausado')
+    consoleCronometro.innerHTML = '00:00:00'
+    clearInterval(timer)
     segundos = 0
 }
 
-export { timer, controleTimer }
+export { timer }
