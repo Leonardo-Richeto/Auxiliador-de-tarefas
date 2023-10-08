@@ -1,7 +1,7 @@
 # Auxiliador de tarefas
-<h2 align="center">Este é um site **totalmente funcional**, acesse: [Auxiliador de tarefas](https://leonardo-richeto.github.io/Auxiliador-de-tarefas/).</h2>
+## Este é um site **totalmente funcional**, acesse: [Auxiliador de tarefas](https://leonardo-richeto.github.io/Auxiliador-de-tarefas/).
 - Criei esta pagina usando **HTML, CSS e JavaScript** para aprender a solucionar problemas durante o desenvolvimento.
-- Esta página me possibilitou colocar em prática e aprender diversas coisas, como: FlexBox, manipular o DOM, lógica de programação, export modules, parâmetros, datas, e muito mais.
+- Esta página me possibilitou colocar em prática e aprender diversas coisas, como: FlexBox, manipular o DOM, lógica de programação, export modules, parâmetros, localStorage, datas, e muito mais.
 
 **<h2 align="center">Página online</h2>**
 
