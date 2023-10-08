@@ -1,4 +1,4 @@
-import { listaFazer, texto } from "../main.js";
+import { listaFazer, texto } from "./main.js";
 import { criaItem } from "./criaItem.js"
 import { atualizaStorage } from "./atualizaStorage.js";
 import { arrayFazer } from "./atualizaStorage.js";

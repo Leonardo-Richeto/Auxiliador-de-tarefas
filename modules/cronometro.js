@@ -1,4 +1,4 @@
-import { consoleCronometro } from "../main.js";
+import { consoleCronometro } from "./main.js";
 let timer
 let segundos = 0
 

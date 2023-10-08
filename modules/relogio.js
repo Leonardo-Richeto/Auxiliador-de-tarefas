@@ -1,5 +1,5 @@
 import { zero } from "./zeroEsquerda.js"
-import { consoleRelogio } from "../main.js"
+import { consoleRelogio } from "./main.js"
 
 export function relogio(){
     const data = new Date()

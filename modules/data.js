@@ -1,5 +1,5 @@
 import { zero } from "./zeroEsquerda.js";
-import { consoleCalendario } from "../main.js";
+import { consoleCalendario } from "./main.js";
 
 const dataHoje = new Date()
 const diaSemana = dataHoje.getDay()

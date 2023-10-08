@@ -1,5 +1,5 @@
 import { criaItem } from "./criaItem.js";
-import { listaFazer, listaFeito } from "../main.js";
+import { listaFazer, listaFeito } from "./main.js";
 import { arrayFazer, arrayFeito } from "./atualizaStorage.js";
 
 export function recuperaStorage(){
