@@ -2,7 +2,7 @@ import { relogio } from "./relogio.js";
 import { dia } from "./data.js";
 import { iniciaCronometro, pausaCronometro, zeraCronometro, timer } from "./cronometro.js";
 import { adicionaAfazer } from "./adicionaAfazer.js";
-import { arrayFazer, arrayFeito } from "./atualizaStorage.js";
+import { arrayFazer, arrayFeito, atualizaStorage } from "./atualizaStorage.js";
 import { removeArrayFazer, removeArrayFeito } from "./removeArray.js";
 import { recuperaStorage } from "./recuperaStorage.js"
 
@@ -84,6 +84,7 @@ export {
     texto,
 }
 
+atualizaStorage()
 recuperaStorage()
 relogio()
 dia()
