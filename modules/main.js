@@ -18,6 +18,12 @@ const listaFazer = document.querySelector('.fazer')
 const listaFeito = document.querySelector('.feito')
 let texto = document.querySelector('#input')
 
+recuperaStorage()
+relogio()
+dia()
+setInterval(relogio, 1000)
+setInterval(dia, 60000)
+
 btnToggle.addEventListener('click', () => {
     document.body.classList.toggle('light')
     btnToggle.classList.toggle('active')
@@ -74,12 +80,6 @@ listaFeito.addEventListener('click', (e) => {
         removeArrayFeito(e.target.parentElement.textContent)
     }
 })
-
-recuperaStorage()
-relogio()
-dia()
-setInterval(relogio, 1000)
-setInterval(dia, 60000)
 
 export { 
     listaFazer,
